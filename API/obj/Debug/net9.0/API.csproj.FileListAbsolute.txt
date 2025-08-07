@@ -1,5 +1,4 @@
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\appsettings.Development.json
-C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\appsettings.json
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\API.staticwebassets.endpoints.json
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\API.exe
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\API.deps.json
