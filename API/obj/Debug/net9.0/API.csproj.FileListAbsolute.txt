@@ -160,3 +160,4 @@ C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\dino2\OneDrive\Documents\.NET React Kurs\Reactivities\API\bin\Debug\net9.0\AutoMapper.dll

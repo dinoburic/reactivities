@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+yOsVMMTipU=",
+  "dgSpecHash": "d8x05E6d/tY=",
   "success": true,
   "projectFilePath": "C:\\Users\\dino2\\OneDrive\\Documents\\.NET React Kurs\\Reactivities\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dino2\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.7\\microsoft.data.sqlite.core.9.0.7.nupkg.sha512",

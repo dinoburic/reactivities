@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bo73uKV9dIc=",
+  "dgSpecHash": "vH9SqpHFjV0=",
   "success": true,
   "projectFilePath": "C:\\Users\\dino2\\OneDrive\\Documents\\.NET React Kurs\\Reactivities\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dino2\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\dino2\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
