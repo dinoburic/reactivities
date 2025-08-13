@@ -21,7 +21,7 @@ export default function NavBar() {
                                 About
                             </MenuItem>
                             <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
-                                Contant
+                                Contact
                             </MenuItem>
                         </Box>
                         <Button size='large' variant="contained" color='warning'>Create activity</Button>
