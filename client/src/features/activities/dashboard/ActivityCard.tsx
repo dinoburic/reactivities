@@ -16,7 +16,7 @@ export default function ActivityCard({activity,selectActivity}:Props) {
         </CardContent>
         <CardActions sx={{display:'flex',justifyContent:'space-between',pb:2}}>
             <Chip label={activity.category} variant="outlined" />
-            <Button onClick={(id)=>selectActivity(activity.id)} size="medium" variant="contained">View</Button>
+            <Button onClick={()=>selectActivity(activity.id)} size="medium" variant="contained">View</Button>
         </CardActions>
     </Card>
   )
