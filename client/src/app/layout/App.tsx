@@ -39,12 +39,15 @@ function App() {
     if(activity.id) {
       setActivities(activities.map(x=> x.id===activity.id? activity : x))
     } else {
-      const newActivity={...activity,id:activities.length.toString()}
-      setSelectedActivity(newActivity);
-      setActivities([...activities,newActivity])
+      
+      setActivities([...activities,{...activity,id:activities.length.toString()}])
     }
 
     setEditMode(false);
+  }
+
+  const handleDelete = (id:string) => {
+    setActivities(activities.filter(x=>x.id!==id))
   }
 
   return (
@@ -61,6 +64,7 @@ function App() {
         openForm={handleOpenForm}
         closeForm={handleFormClose}
         submitForm={handleSubmitForm}
+        deleteActivity={handleDelete}
         />
       </Container>
     </Box>
