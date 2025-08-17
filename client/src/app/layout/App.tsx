@@ -1,23 +1,17 @@
-import { CssBaseline, Container, Box } from "@mui/material";
-import axios from "axios";
-import { useEffect, useState } from "react"
+import { CssBaseline, Container, Box, Typography } from "@mui/material";
+import { useState } from "react"
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
+import { useActivities } from "../../lib/hooks/useActivities";
 
 function App() {
-  const [activities, setActivities] = useState<Activity[]>([]);
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined);
   const [editMode, setEditMode] = useState(false);
+  const {activities,isPending} = useActivities();
 
-
-
-  useEffect(() => {
-    axios.get<Activity[]>('http://localhost:5001/api/activities')
-      .then(response => setActivities(response.data));
-  })
 
   const handleSelectActivity = (id: string) => {
-    setSelectedActivity(activities.find(x=> x.id===id));
+    setSelectedActivity(activities!.find(x => x.id === id));
   }
 
   const handleCancelSelectActivity = () => {
@@ -25,7 +19,7 @@ function App() {
   }
 
   const handleOpenForm = (id?: string) => {
-    if(id) handleSelectActivity(id);
+    if (id) handleSelectActivity(id);
     else handleCancelSelectActivity();
     setEditMode(true);
 
@@ -36,36 +30,39 @@ function App() {
   }
 
   const handleSubmitForm = (activity: Activity) => {
-    if(activity.id) {
-      setActivities(activities.map(x=> x.id===activity.id? activity : x))
-    } else {
-      
-      setActivities([...activities,{...activity,id:activities.length.toString()}])
-    }
+    // if (activity.id) {
+    //   setActivities(activities.map(x => x.id === activity.id ? activity : x))
+    // } else {
 
+    //   setActivities([...activities, { ...activity, id: activities.length.toString() }])
+    // }
+  console.log(activity);
     setEditMode(false);
   }
 
-  const handleDelete = (id:string) => {
-    setActivities(activities.filter(x=>x.id!==id))
+  const handleDelete = (id: string) => {
+   console.log(id);
   }
 
   return (
-    <Box sx={{backgroundColor:'#eeee'}}>
+    <Box sx={{ backgroundColor: '#eeee', minHeight:'100vh' }}>
       <CssBaseline />
       <NavBar openForm={handleOpenForm} />
       <Container maxWidth='xl' sx={{ mt: 3 }}>
-        <ActivityDashboard 
-        activities={activities}
-        selectActivity={handleSelectActivity}
-        cancelSelectActivity={handleCancelSelectActivity}
-        selectedActivity={selectedActivity}
-        editMode={editMode}
-        openForm={handleOpenForm}
-        closeForm={handleFormClose}
-        submitForm={handleSubmitForm}
-        deleteActivity={handleDelete}
+        {!activities || isPending?  (
+          <Typography>Loading...</Typography>
+        ) :  <ActivityDashboard
+          activities={activities}
+          selectActivity={handleSelectActivity}
+          cancelSelectActivity={handleCancelSelectActivity}
+          selectedActivity={selectedActivity}
+          editMode={editMode}
+          openForm={handleOpenForm}
+          closeForm={handleFormClose}
+          submitForm={handleSubmitForm}
+          deleteActivity={handleDelete}
         />
+        }
       </Container>
     </Box>
   )
