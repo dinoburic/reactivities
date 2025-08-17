@@ -29,16 +29,7 @@ function App() {
     setEditMode(false);
   }
 
-  const handleSubmitForm = (activity: Activity) => {
-    // if (activity.id) {
-    //   setActivities(activities.map(x => x.id === activity.id ? activity : x))
-    // } else {
 
-    //   setActivities([...activities, { ...activity, id: activities.length.toString() }])
-    // }
-  console.log(activity);
-    setEditMode(false);
-  }
 
   const handleDelete = (id: string) => {
    console.log(id);
@@ -59,7 +50,6 @@ function App() {
           editMode={editMode}
           openForm={handleOpenForm}
           closeForm={handleFormClose}
-          submitForm={handleSubmitForm}
           deleteActivity={handleDelete}
         />
         }
